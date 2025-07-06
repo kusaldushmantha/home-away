@@ -1,9 +1,9 @@
 import React from 'react';
 
-const LinkDropDown = () => {
+const LinksDropDown = () => {
     return (
-        <div>LinkDropDown</div>
+        <div>LinksDropDown</div>
     )
 }
 
-export default LinkDropDown
+export default LinksDropDown
