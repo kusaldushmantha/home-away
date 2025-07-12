@@ -2,14 +2,7 @@ import React from 'react';
 import FormContainer from "@/components/form/form-container";
 import FormInput from "@/components/form/form-input";
 import { SubmitButton } from "@/components/form/buttons";
-
-const createProfileAction = async (prevState: unknown, formData: FormData) => {
-  "use server"
-  console.log(formData);
-  const firstName = formData.get("firstName") as string;
-  console.log(firstName);
-  return { message: "Profile Created" }
-}
+import { createProfileAction } from "@/utils/actions";
 
 const CreateProfile = () => {
   return <section>
