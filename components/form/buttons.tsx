@@ -13,13 +13,15 @@ type SubmitButtonProps = {
 export const SubmitButton = ({ className = '', text = 'submit' }: SubmitButtonProps) => {
   const { pending } = useFormStatus()
   return (
-    <Button type="submit" className={`capitalize ${className}`} size='lg' disabled={pending}>
-      {text || "Submit"}
-      {pending ?
+    <Button
+      type='submit'
+      disabled={pending}
+      className={`capitalize ${className} `}>
+      {pending ? (
         <>
-          <ReloadIcon className="ml-2 h-4 w-4 animate-spin"/>
+          <ReloadIcon className='mr-2 h-4 w-4 animate-spin'/>
           Please wait...
-        </> : text}
+        </>) : (text)}
     </Button>
-  )
+  );
 }
